@@ -19,3 +19,12 @@ model Account {
   type            String
   opening_balance Decimal @default(0)
 }
+model Company {
+  id        Int     @id @default(autoincrement())
+  name      String
+  address   String?
+  gstin     String?
+  email     String?
+  phone     String?
+  createdAt DateTime @default(now())
+}
